@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+h1 {
+  font-size: 8px;
+  font-family: "Open Sans", 'Times New Roman', Times, serif;
+}
+
+.tree {
+  height: 152px;
+  width: 213px;
+  border: 10px solid #000;
+}
+
+.star {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(rgb(243, 162, 10), rgb(231, 210, 170));
+  clip-path: polygon(50% 0%, 65% 33%, 98% 35%, 75% 58%, 79% 91%, 50% 74%, 21% 91%, 28% 59%, 2% 35%, 37% 32%);
+  position: absolute;
+  top: 2px;
+  left: 105px;
+  z-index: 2;
+  animation-name: star-flash;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.triangle1 {
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #00806A;
+  position: absolute;
+  top: 10px;
+  left: 71px;
+}
+
+.triangle2 {
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 80px solid #00806A;
+  position: absolute;
+  top: 32px;
+  left: 42px;
+}
+
+.triangle3 {
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #00806A;
+  position: absolute;
+  top: 50px;
+  left: 24px;
+}
+
+.wood {
+  left: 115px;
+  width: 10px;
+  height: 20px;
+  background-color: #a52a2a;
+  position: absolute;
+  top: 150px;
+}
+
+.ball {
+  background: #ff0000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.ball1 {
+  top: 50px;
+  left: 90px;
+  animation-name: odd-flash;
+}
+
+.ball2 {
+  top: 70px;
+  left: 133px;
+  animation-name: even-flash;
+
+}
+
+.ball3 {
+  top: 90px;
+  left: 89px;
+  animation-name: odd-flash;
+
+}
+
+.ball4 {
+  top: 125px;
+  left: 51px;
+  animation-name: even-flash;
+}
+
+.ball5 {
+  top: 115px;
+  left: 141px;
+  animation-name: odd-flash;
+}
+
+@keyframes star-flash {
+  0%, 100% {
+    background: rgb(228, 197, 140);
+    box-shadow: 0px 2px 20px 4px rgb(221, 161, 49, 1);
+  }
+
+  50% {
+    background: rgb(241, 161, 49);
+    box-shadow: 0px 2px 20px 4px rgb(241, 161, 49);
+  }
+}
+
+@keyframes even-flash {
+  0%, 100% {
+    background: rgb(245, 56, 56, 1);
+    box-shadow: 0px 2px 20px 4px rgb(255, 0, 0, 1);
+  }
+
+  50% {
+    background: rgba(255, 0, 0, 0.7);
+    box-shadow: 0px 2px 20px 4px rgb(255, 0, 0, 0.3);
+  }
+}
+
+@keyframes odd-flash {
+  50% {
+    background: rgb(245, 56, 56, 1);
+    box-shadow: 0px 2px 20px 4px rgb(255, 0, 0, 1);
+  }
+
+  0%, 100% {
+    background: rgba(255, 0, 0, 0.7);
+    box-shadow: 0px 2px 20px 4px rgb(255, 0, 0, 0.3);
+  }
+}
+
+.gift {
+  top: 130px;
+  left: 173px;
+  height: 40px;
+  width: 50px;
+  background: #fb8a3a;
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+}
+
+.gift::after {
+  content: "";
+  position: absolute;
+  background-color: #db3a34;
+  width: 10px;
+  height: 51px;
+  left: 21px;
+  bottom: 0;
+}
+
+.cover {
+  height: 5px;
+  width: 110%;
+  background: #fbb03b;
+  transform: translate(-3px, -11px);
+  border-top: 10px solid #fdd67b;
+  border-radius: 5px 5px 0 0;
+}
+
+.cover,
+.gift {
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, .2);
+}
+
+.ribbon {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border: 3px solid #db3a34;
+  border-radius: 50%;
+  transform: skew(15deg,
+      15deg);
+  top: -26px;
+  left: 2px;
+}
+
+.ribbon:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border: 3px solid #db3a34;
+  border-radius: 50%;
+  transform: skew(-10deg, -26deg);
+  left: 22px;
+  top: -8px;
+}
